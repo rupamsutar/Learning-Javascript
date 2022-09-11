@@ -30,11 +30,19 @@
 // console.log(typeof 23);
 // console.log(typeof "Rupam");
 
+//Coding Challenge (BMI)
 
-const now = 2022;
-const agePranali = 2022 - 1999;
-const ageRupam = 2022 - 1998;
+let marksWeight = 95;
+let marksHeight = 1.88;
 
-console.log(agePranali, ageRupam);
+let marksBmiCalculator = marksWeight / (marksHeight ** 2);
+console.log(marksBmiCalculator);
 
-console.log(2 ** 5, ageRupam * 2, agePranali + 10);
+let johnsWeight = 85;
+let johnsheight = 1.76;
+
+let johnsBmiCalculator = johnsWeight / (johnsheight ** 2);
+console.log(johnsBmiCalculator);
+
+let marksHigherBmi = marksBmiCalculator > johnsBmiCalculator
+console.log(marksHigherBmi);

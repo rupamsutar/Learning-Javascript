@@ -83,26 +83,47 @@
 
 //Coding Challenge #2
 
-let marksWeight = 95;
-let marksHeight = 1.88;
+// let marksWeight = 95;
+// let marksHeight = 1.88;
 
-let marksBmiCalculator = marksWeight / (marksHeight ** 2);
-
-
-let johnsWeight = 85;
-let johnsheight = 1.76;
-
-let johnsBmiCalculator = johnsWeight / (johnsheight ** 2);
+// let marksBmiCalculator = marksWeight / (marksHeight ** 2);
 
 
-let marksHigherBmi = marksBmiCalculator > johnsBmiCalculator;
+// let johnsWeight = 85;
+// let johnsheight = 1.76;
 
-if (marksHigherBmi) {
-    console.log(`Mark's BMI = ${marksBmiCalculator}
-john's BMI = ${johnsBmiCalculator}
-Mark's BMI is greater than John`);
-} else {
-    console.log(`Mark's BMI = ${marksBmiCalculator}
-john's BMI = ${johnsBmiCalculator}
-John's BMI is greater than Mark`);
-}
+// let johnsBmiCalculator = johnsWeight / (johnsheight ** 2);
+
+
+// let marksHigherBmi = marksBmiCalculator > johnsBmiCalculator;
+
+// if (marksHigherBmi) {
+//     console.log(`Mark's BMI = ${marksBmiCalculator}
+// john's BMI = ${johnsBmiCalculator}
+// Mark's BMI is greater than John`);
+// } else {
+//     console.log(`Mark's BMI = ${marksBmiCalculator}
+// john's BMI = ${johnsBmiCalculator}
+// John's BMI is greater than Mark`);
+// }
+
+// Type Conversion
+
+const inputYear = "1998";
+console.log(inputYear + 24);
+console.log(Number(inputYear) + 24);
+
+console.log(Number("Jonas"));
+console.log(typeof (NaN));
+
+console.log(String(24) + 24);
+
+// Type Coercion
+
+console.log("I am " + 24 + " years of old");
+
+console.log("I am " + (30 - 6) + " years  old");
+
+
+// + coverts into string
+// where as any other sign converts into number

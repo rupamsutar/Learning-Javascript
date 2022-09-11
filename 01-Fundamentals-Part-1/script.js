@@ -156,28 +156,54 @@
 
 // Coding Challenge #3
 
-const dScore1 = 111;
-const dScore2 = 111;
-const dScore3 = 111;
+// const dScore1 = 111;
+// const dScore2 = 111;
+// const dScore3 = 111;
 
-const kScore1 = 111;
-const kScore2 = 111;
-const kScore3 = 111;
+// const kScore1 = 111;
+// const kScore2 = 111;
+// const kScore3 = 111;
 
-const dAvg = (dScore1 + dScore2 + dScore3) / 3;
-const kAvg = (kScore1 + kScore2 + kScore3) / 3;
+// const dAvg = (dScore1 + dScore2 + dScore3) / 3;
+// const kAvg = (kScore1 + kScore2 + kScore3) / 3;
 
-if (dAvg > kAvg && dAvg >= 100) {
-    console.log("Dolphins Win");
-} else if (kAvg > dAvg && kAvg >= 100) {
-    console.log("Koalas Win");
-} else if (kAvg === dAvg && kAvg >= 100) {
-    console.log("Its a Draw !")
-} else {
-    console.log("Uh Oh ! No team wins")
-};
+// if (dAvg > kAvg && dAvg >= 100) {
+//     console.log("Dolphins Win");
+// } else if (kAvg > dAvg && kAvg >= 100) {
+//     console.log("Koalas Win");
+// } else if (kAvg === dAvg && kAvg >= 100) {
+//     console.log("Its a Draw !")
+// } else {
+//     console.log("Uh Oh ! No team wins")
+// };
 
 
+// Switch Statements
 
+const day = "Wednesday";
+
+switch (day) {
+    case "Monday":
+        console.log("Its a Monday");
+        break;
+    case "Tuesday":
+        console.log("Its a tuesday");
+        break;
+    case "Wednesday":
+        console.log("Its a Wednesday");
+        break;
+    case "Thursday":
+        console.log("Its a Thursday");
+        break;
+    case "Friday":
+        console.log("Its a friday");
+        break;
+    case "Saturday":
+        console.log("Its a saturday");
+        break;
+    default:
+        console.log("Invalid Day !");
+
+}
 
 

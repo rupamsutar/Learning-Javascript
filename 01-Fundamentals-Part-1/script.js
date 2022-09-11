@@ -128,9 +128,9 @@
 // + coverts into string
 // where as any other sign converts into number
 
-/* 
+/*
 
-5 Falsy Values 
+5 Falsy Values
 
 1. 0
 2. ""
@@ -140,17 +140,44 @@
 
 */
 
-console.log(Boolean(0));
-console.log(Boolean(undefined));
-console.log(Boolean("Jonas"));
-console.log(Boolean(""));
-console.log(Boolean(Number("Jonas")));
+// console.log(Boolean(0));
+// console.log(Boolean(undefined));
+// console.log(Boolean("Jonas"));
+// console.log(Boolean(""));
+// console.log(Boolean(Number("Jonas")));
 
-const money = 0;
-if (money) {
-    console.log("Money is Non-zero");
+// const money = 0;
+// if (money) {
+//     console.log("Money is Non-zero");
+// } else {
+//     console.log("Money is Zero");
+// }
+
+
+// Coding Challenge #3
+
+const dScore1 = 111;
+const dScore2 = 111;
+const dScore3 = 111;
+
+const kScore1 = 111;
+const kScore2 = 111;
+const kScore3 = 111;
+
+const dAvg = (dScore1 + dScore2 + dScore3) / 3;
+const kAvg = (kScore1 + kScore2 + kScore3) / 3;
+
+if (dAvg > kAvg && dAvg >= 100) {
+    console.log("Dolphins Win");
+} else if (kAvg > dAvg && kAvg >= 100) {
+    console.log("Koalas Win");
+} else if (kAvg === dAvg && kAvg >= 100) {
+    console.log("Its a Draw !")
 } else {
-    console.log("Money is Zero");
-}
+    console.log("Uh Oh ! No team wins")
+};
+
+
+
 
 

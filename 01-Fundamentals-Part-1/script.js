@@ -62,20 +62,47 @@
 // console.log(rupamNew);
 
 
-let age = 15;
+// let age = 15;
 
-if (age >= 18) {
-    console.log("Sarah is ready for a driving license");
+// if (age >= 18) {
+//     console.log("Sarah is ready for a driving license");
+// } else {
+//     console.log(`Sarah is not ready for a driving license ! Wait for another ${18 - age} years !`)
+// }
+
+// let birthYear = 2003;
+// let century;
+// if (birthYear < 2000) {
+//     century = 20;
+// } else {
+//     century = 21;
+// }
+
+// console.log(century);
+
+
+//Coding Challenge #2
+
+let marksWeight = 95;
+let marksHeight = 1.88;
+
+let marksBmiCalculator = marksWeight / (marksHeight ** 2);
+
+
+let johnsWeight = 85;
+let johnsheight = 1.76;
+
+let johnsBmiCalculator = johnsWeight / (johnsheight ** 2);
+
+
+let marksHigherBmi = marksBmiCalculator > johnsBmiCalculator;
+
+if (marksHigherBmi) {
+    console.log(`Mark's BMI = ${marksBmiCalculator}
+john's BMI = ${johnsBmiCalculator}
+Mark's BMI is greater than John`);
 } else {
-    console.log(`Sarah is not ready for a driving license ! Wait for another ${18 - age} years !`)
+    console.log(`Mark's BMI = ${marksBmiCalculator}
+john's BMI = ${johnsBmiCalculator}
+John's BMI is greater than Mark`);
 }
-
-let birthYear = 2003;
-let century;
-if (birthYear < 2000) {
-    century = 20;
-} else {
-    century = 21;
-}
-
-console.log(century);

@@ -32,17 +32,32 @@
 
 //Coding Challenge (BMI)
 
-let marksWeight = 95;
-let marksHeight = 1.88;
+// let marksWeight = 95;
+// let marksHeight = 1.88;
 
-let marksBmiCalculator = marksWeight / (marksHeight ** 2);
-console.log(marksBmiCalculator);
+// let marksBmiCalculator = marksWeight / (marksHeight ** 2);
+// console.log(marksBmiCalculator);
 
-let johnsWeight = 85;
-let johnsheight = 1.76;
+// let johnsWeight = 85;
+// let johnsheight = 1.76;
 
-let johnsBmiCalculator = johnsWeight / (johnsheight ** 2);
-console.log(johnsBmiCalculator);
+// let johnsBmiCalculator = johnsWeight / (johnsheight ** 2);
+// console.log(johnsBmiCalculator);
 
-let marksHigherBmi = marksBmiCalculator > johnsBmiCalculator
-console.log(marksHigherBmi);
+// let marksHigherBmi = marksBmiCalculator > johnsBmiCalculator
+// console.log(marksHigherBmi);
+
+const firstName = "Rupam";
+const job = "Web-Developer";
+const birthYear = 1998;
+const currentYear = 2022;
+
+const rupam = "I'm " + firstName + " a " + (currentYear - birthYear) + " years old " +
+    job + " !";
+
+console.log(rupam);
+
+const rupamNew = `I'm ${firstName} a ${currentYear - birthYear} years old ${job} !`;
+
+console.log(rupamNew);
+

@@ -109,21 +109,48 @@
 
 // Type Conversion
 
-const inputYear = "1998";
-console.log(inputYear + 24);
-console.log(Number(inputYear) + 24);
+// const inputYear = "1998";
+// console.log(inputYear + 24);
+// console.log(Number(inputYear) + 24);
 
-console.log(Number("Jonas"));
-console.log(typeof (NaN));
+// console.log(Number("Jonas"));
+// console.log(typeof (NaN));
 
-console.log(String(24) + 24);
+// console.log(String(24) + 24);
 
 // Type Coercion
 
-console.log("I am " + 24 + " years of old");
+// console.log("I am " + 24 + " years of old");
 
-console.log("I am " + (30 - 6) + " years  old");
+// console.log("I am " + (30 - 6) + " years  old");
 
 
 // + coverts into string
 // where as any other sign converts into number
+
+/* 
+
+5 Falsy Values 
+
+1. 0
+2. ""
+3. undefined
+4. null
+5. NaN
+
+*/
+
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean("Jonas"));
+console.log(Boolean(""));
+console.log(Boolean(Number("Jonas")));
+
+const money = 0;
+if (money) {
+    console.log("Money is Non-zero");
+} else {
+    console.log("Money is Zero");
+}
+
+

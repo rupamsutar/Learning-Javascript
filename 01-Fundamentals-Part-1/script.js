@@ -47,17 +47,35 @@
 // let marksHigherBmi = marksBmiCalculator > johnsBmiCalculator
 // console.log(marksHigherBmi);
 
-const firstName = "Rupam";
-const job = "Web-Developer";
-const birthYear = 1998;
-const currentYear = 2022;
+// const firstName = "Rupam";
+// const job = "Web-Developer";
+// const birthYear = 1998;
+// const currentYear = 2022;
 
-const rupam = "I'm " + firstName + " a " + (currentYear - birthYear) + " years old " +
-    job + " !";
+// const rupam = "I'm " + firstName + " a " + (currentYear - birthYear) + " years old " +
+//     job + " !";
 
-console.log(rupam);
+// console.log(rupam);
 
-const rupamNew = `I'm ${firstName} a ${currentYear - birthYear} years old ${job} !`;
+// const rupamNew = `I'm ${firstName} a ${currentYear - birthYear} years old ${job} !`;
 
-console.log(rupamNew);
+// console.log(rupamNew);
 
+
+let age = 15;
+
+if (age >= 18) {
+    console.log("Sarah is ready for a driving license");
+} else {
+    console.log(`Sarah is not ready for a driving license ! Wait for another ${18 - age} years !`)
+}
+
+let birthYear = 2003;
+let century;
+if (birthYear < 2000) {
+    century = 20;
+} else {
+    century = 21;
+}
+
+console.log(century);

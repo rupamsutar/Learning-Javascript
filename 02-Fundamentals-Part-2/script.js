@@ -8,29 +8,53 @@
 
 // why using strict is signified in the example above.
 
-function logger() {
-    console.log("My name is Rupam");
+// function logger() {
+//     console.log("My name is Rupam");
+// };
+
+// // calling / running / Invoking,  a function
+// logger();
+
+// function fruitProcessor(apples, oranges) {
+//     console.log(apples, oranges);
+//     const juice = `Juice with ${apples} apples and ${oranges} oranges !`;
+//     return juice;
+// }
+
+
+
+// console.log(fruitProcessor(5, 2));
+
+// const appleJuice = fruitProcessor(5, 0);
+// console.log(appleJuice)
+
+// const orangeJuice = fruitProcessor(0, 5);
+// console.log(orangeJuice);
+
+// const appleOrangeMixJuice = fruitProcessor(2.5, 2.5);
+// console.log(appleOrangeMixJuice);
+
+//Function Declaration
+
+function calcAge1(birthYear) {
+    return (2022 - birthYear);
 };
 
-// calling / running / Invoking,  a function
-logger();
+console.log(calcAge1(1998));
 
-function fruitProcessor(apples, oranges) {
-    console.log(apples, oranges);
-    const juice = `Juice with ${apples} apples and ${oranges} oranges !`;
-    return juice;
-}
+// function Expression:
 
+const calcAge2 = function (birthYear) {
+    return (2022 - birthYear);
+};
 
+console.log(calcAge2(1999));
 
-console.log(fruitProcessor(5, 2));
+/*
 
-const appleJuice = fruitProcessor(5, 0);
-console.log(appleJuice)
+Function can be called before the "Function Declarations are formed".
+However,
+In the function Expressions we cannot call the function before.
 
-const orangeJuice = fruitProcessor(0, 5);
-console.log(orangeJuice);
-
-const appleOrangeMixJuice = fruitProcessor(2.5, 2.5);
-console.log(appleOrangeMixJuice);
+*/
 

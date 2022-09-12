@@ -180,30 +180,37 @@
 
 // Switch Statements
 
-const day = "Wednesday";
+// const day = "Wednesday";
 
-switch (day) {
-    case "Monday":
-        console.log("Its a Monday");
-        break;
-    case "Tuesday":
-        console.log("Its a tuesday");
-        break;
-    case "Wednesday":
-        console.log("Its a Wednesday");
-        break;
-    case "Thursday":
-        console.log("Its a Thursday");
-        break;
-    case "Friday":
-        console.log("Its a friday");
-        break;
-    case "Saturday":
-        console.log("Its a saturday");
-        break;
-    default:
-        console.log("Invalid Day !");
+// switch (day) {
+//     case "Monday":
+//         console.log("Its a Monday");
+//         break;
+//     case "Tuesday":
+//         console.log("Its a tuesday");
+//         break;
+//     case "Wednesday":
+//         console.log("Its a Wednesday");
+//        break;
+//     case "Thursday":
+//         console.log("Its a Thursday");
+//         break;
+//     case "Friday":
+//         console.log("Its a friday");
+//         break;
+//     case "Saturday":
+//         console.log("Its a saturday");
+//         break;
+//     default:
+//         console.log("Invalid Day !");
 
-}
+// }
 
+//coding challenge #4
+
+const bill = 250;
+
+const tip = 50 <= bill <= 300 ? 0.15 * bill : 0.2 * bill;
+
+console.log("bill value: " + bill + ", Tip value: " + tip + ", Total Value: " + (bill + tip));
 

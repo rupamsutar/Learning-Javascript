@@ -185,7 +185,7 @@ console.log(friends.indexOf("Amol"));
 
 console.log(friends.includes("Chetan"));
 
-*/
+
 
 //Coding Challenge #3
 
@@ -210,3 +210,43 @@ calcTip(44);
 
 console.log(tips);
 console.log(total);
+
+
+*/
+
+// Introduction to objects:
+
+const jonas = [
+    "Rupam",
+    "Sutar",
+    2022 - 1998,
+    "Student",
+    ["Pranali", "Chiku", "Shubham"]
+];
+
+const rupam = {
+    firstName: "Rupam",
+    lastName: "Sutar",
+    age: 2022 - 1998,
+    profession: "Student",
+    friends: ["Chiku", "Pranali", "Shubham"]
+};
+
+console.log(rupam);
+console.log(rupam.lastName);
+console.log(rupam["profession"]);
+
+const newName = "Name";
+console.log(rupam["first" + newName]);
+console.log(rupam["last" + newName]);
+
+
+const interestedIn = prompt(`What do you want to know about Rupam
+Please choose from below
+firstName, lastName, age, profession, friends`);
+
+if (rupam[interestedIn]) {
+    console.log(rupam[interestedIn]);
+} else {
+    console.log("Please choose from firstName, lastName, age, profession, friends");
+}

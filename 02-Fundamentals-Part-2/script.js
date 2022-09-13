@@ -133,7 +133,7 @@ const firstName = "Rupam";
 const rupam = [firstName, "Sutar", 2022 - 1998, "Student", friends];
 console.log(rupam);
 
-*/
+
 
 // Basic Array Operation
 
@@ -164,7 +164,7 @@ const newpop = friends.pop();
 console.log(friends);
 console.log(newpop);
 
-// Removing the element from the front 
+// Removing the element from the front
 // This will also store the removed value from the front:
 
 friends.shift();
@@ -174,13 +174,39 @@ const newshiftl = friends.shift();
 console.log(friends);
 console.log(newshiftl);
 
-// TO know the position of an element 
+// TO know the position of an element
 friends.unshift("Pranali");
 friends.unshift("Chiku");
 
 console.log(friends);
 console.log(friends.indexOf("Amol"));
 
-//to know whether it is there or not 
+//to know whether it is there or not
 
 console.log(friends.includes("Chetan"));
+
+*/
+
+//Coding Challenge #3
+
+function calcTip(bill) {
+    if (50 <= bill <= 300) {
+        tips.push(0.15 * bill);
+        total.push(bill + (0.15 * bill));
+        return 0.15 * bill;
+    } else {
+        tips.push(0.2 * bill);
+        total.push(bill + (0.2 * bill));
+        return 0.2 * bill;
+    }
+};
+
+const tips = [];
+const total = [];
+
+calcTip(125);
+calcTip(555);
+calcTip(44);
+
+console.log(tips);
+console.log(total);

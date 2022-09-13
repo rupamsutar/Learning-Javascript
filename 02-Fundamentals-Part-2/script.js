@@ -109,9 +109,9 @@ function checkWinner(dAvg, kAvg) {
 
 checkWinner(dAvg, kAvg);
 
-*/
 
-// Arrays : 
+
+// Arrays :
 
 const friend1 = "Pranali Newaskar";
 const friend2 = "Amol Goykar"
@@ -132,3 +132,55 @@ console.log(newFriends);
 const firstName = "Rupam";
 const rupam = [firstName, "Sutar", 2022 - 1998, "Student", friends];
 console.log(rupam);
+
+*/
+
+// Basic Array Operation
+
+const friends = ["Pranali", "Amol", "Revan", "Chetan", "Jeevan"];
+
+// Adding an element to the array;:
+friends.push("Digamber");
+console.log(friends);
+
+// pushing act contains a returned value of number of length
+const newLength = friends.push("Shubham");
+console.log(friends);
+console.log(newLength);
+
+// Adding an element to the front on the array
+// this act also containes the returned value of number of length
+
+const newShift = friends.unshift("Chiku");
+console.log(friends);
+console.log(newShift);
+
+// removing an element from the array from last:
+// this pop holds the returned value of an element that has been removed
+
+friends.pop();
+console.log(friends);
+const newpop = friends.pop();
+console.log(friends);
+console.log(newpop);
+
+// Removing the element from the front 
+// This will also store the removed value from the front:
+
+friends.shift();
+console.log(friends);
+
+const newshiftl = friends.shift();
+console.log(friends);
+console.log(newshiftl);
+
+// TO know the position of an element 
+friends.unshift("Pranali");
+friends.unshift("Chiku");
+
+console.log(friends);
+console.log(friends.indexOf("Amol"));
+
+//to know whether it is there or not 
+
+console.log(friends.includes("Chetan"));

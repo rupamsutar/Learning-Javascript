@@ -212,7 +212,7 @@ console.log(tips);
 console.log(total);
 
 
-*/
+
 
 // Introduction to objects:
 
@@ -250,3 +250,34 @@ if (rupam[interestedIn]) {
 } else {
     console.log("Please choose from firstName, lastName, age, profession, friends");
 }
+
+*/
+
+// Object Methods: 
+
+const rupam = {
+    firstName: "Rupam",
+    lastName: "Sutar",
+    birthYear: 1998,
+    profession: "Student",
+    friends: ["Chiku", "Pranali", "Shubham"],
+    hasDriversLicense: true,
+
+    // calcAge: function (birthYear) {
+    //     return (2022 - birthYear);
+    // }
+
+    // calcAge: function () {
+    //     console.log(this);
+    //     return 2022 - this.birthYear;
+    // }
+
+    calcAge: function () {
+        this.age = 2022 - this.birthYear;
+        return this.age;
+    }
+};
+
+console.log(rupam.age);
+console.log(rupam["calcAge"]());
+console.log(rupam.age);

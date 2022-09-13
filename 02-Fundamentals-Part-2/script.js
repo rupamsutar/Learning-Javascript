@@ -251,7 +251,7 @@ if (rupam[interestedIn]) {
     console.log("Please choose from firstName, lastName, age, profession, friends");
 }
 
-*/
+
 
 // Object Methods: 
 
@@ -284,3 +284,37 @@ const rupam = {
 };
 
 console.log(rupam.getSummary());
+
+*/
+
+// Coding Challenge #4
+
+
+const markMiller = {
+    fullName: "Mark Miller",
+    mass: 78,
+    height: 1.69,
+    calcBMI: function () {
+        this.bmi = (this.mass / (this.height ** 2));
+        return this.bmi;
+    }
+}
+
+const johnSmith = {
+    fullName: "John Smith",
+    mass: 92,
+    height: 1.95,
+    calcBMI: function () {
+        this.bmi = (this.mass / (this.height ** 2));
+        return this.bmi;
+    }
+}
+
+if (markMiller.calcBMI() > johnSmith.calcBMI()) {
+    console.log(`Marks BMI (${markMiller.bmi}) is higher than John Smith's BMI (${johnSmith.bmi})`);
+} else if (markMiller.calcBMI() === johnSmith.calcBMI()) {
+    console.log(`Marks BMI (${markMiller.bmi}) is equal John Smith's BMI (${johnSmith.bmi})`);
+} else {
+    console.log(`Marks BMI (${markMiller.bmi}) is less than John Smith's BMI (${johnSmith.bmi})`);
+}
+

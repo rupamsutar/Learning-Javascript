@@ -1,42 +1,44 @@
 "use strict";
 
-// let hasDriversLicense = false;
-// let passTest = true;
-
-// if (passTest) hasDriversLicense = true;
-// if (hasDriversLicense) console.log("I can Drive !");
-
-// why using strict is signified in the example above.
-
-// function logger() {
-//     console.log("My name is Rupam");
-// };
-
-// // calling / running / Invoking,  a function
-// logger();
-
-// function fruitProcessor(apples, oranges) {
-//     console.log(apples, oranges);
-//     const juice = `Juice with ${apples} apples and ${oranges} oranges !`;
-//     return juice;
-// }
-
-
-
-// console.log(fruitProcessor(5, 2));
-
-// const appleJuice = fruitProcessor(5, 0);
-// console.log(appleJuice)
-
-// const orangeJuice = fruitProcessor(0, 5);
-// console.log(orangeJuice);
-
-// const appleOrangeMixJuice = fruitProcessor(2.5, 2.5);
-// console.log(appleOrangeMixJuice);
-
-//Function Declaration
-
 /*
+
+let hasDriversLicense = false;
+let passTest = true;
+
+if (passTest) hasDriversLicense = true;
+if (hasDriversLicense) console.log("I can Drive !");
+
+why using strict is signified in the example above.
+
+function logger() {
+    console.log("My name is Rupam");
+};
+
+// calling / running / Invoking,  a function
+logger();
+
+function fruitProcessor(apples, oranges) {
+    console.log(apples, oranges);
+    const juice = `Juice with ${apples} apples and ${oranges} oranges !`;
+    return juice;
+}
+
+
+
+console.log(fruitProcessor(5, 2));
+
+const appleJuice = fruitProcessor(5, 0);
+console.log(appleJuice)
+
+const orangeJuice = fruitProcessor(0, 5);
+console.log(orangeJuice);
+
+const appleOrangeMixJuice = fruitProcessor(2.5, 2.5);
+console.log(appleOrangeMixJuice);
+
+Function Declaration
+
+
 
 function calcAge1(birthYear) {
     return (2022 - birthYear);
@@ -69,7 +71,7 @@ const yearsUntillRetirement = (birthYear, firstName) => {
 
 console.log(yearsUntillRetirement(1996, "Revan"));
 
-*/
+
 
 // Function Calling Other Function :
 
@@ -85,3 +87,26 @@ function fruitProcessor(apples, oranges) {
 }
 
 console.log(fruitProcessor(4, 12));
+
+*/
+
+//Coding Challenge
+
+const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3;
+
+const dAvg = calcAverage(85, 54, 41);
+const kAvg = calcAverage(23, 34, 27);
+
+function checkWinner(dAvg, kAvg) {
+    if (dAvg >= 2 * kAvg) {
+        console.log(`Dolphins Win (${dAvg} vs ${kAvg}) !`);
+    } else if (kAvg >= 2 * dAvg) {
+        console.log(`Koalas Win (${kAvg} vs ${dAvg}) !`);
+    } else {
+        console.log("No Team Wins");
+    };
+};
+
+checkWinner(dAvg, kAvg);
+
+

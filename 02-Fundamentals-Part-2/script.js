@@ -255,6 +255,7 @@ if (rupam[interestedIn]) {
 
 // Object Methods: 
 
+
 const rupam = {
     firstName: "Rupam",
     lastName: "Sutar",
@@ -275,9 +276,11 @@ const rupam = {
     calcAge: function () {
         this.age = 2022 - this.birthYear;
         return this.age;
+    },
+
+    getSummary: function () {
+        return (`${this.firstName} is a ${this.calcAge()}-year Old ${this.profession}, and he has ${this.hasDriversLicense ? "a" : "no"} drivers license !`);
     }
 };
 
-console.log(rupam.age);
-console.log(rupam["calcAge"]());
-console.log(rupam.age);
+console.log(rupam.getSummary());

@@ -55,7 +55,7 @@ console.log(calcAge2(1999));
 
 
 Function can be called before the "Function Declarations are formed".
-*/
+
 
 // Arrow Functions !
 
@@ -68,3 +68,20 @@ const yearsUntillRetirement = (birthYear, firstName) => {
 };
 
 console.log(yearsUntillRetirement(1996, "Revan"));
+
+*/
+
+// Function Calling Other Function :
+
+function cutFruitPieces(fruits) {
+    return (fruits * 4);
+};
+
+function fruitProcessor(apples, oranges) {
+    const applePieces = cutFruitPieces(apples);
+    const orangePieces = cutFruitPieces(oranges);
+
+    return (`Juice with ${applePieces} pieces of apples and ${orangePieces} pieces of oranges !`);
+}
+
+console.log(fruitProcessor(4, 12));

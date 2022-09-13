@@ -88,7 +88,7 @@ function fruitProcessor(apples, oranges) {
 
 console.log(fruitProcessor(4, 12));
 
-*/
+
 
 //Coding Challenge
 
@@ -109,4 +109,26 @@ function checkWinner(dAvg, kAvg) {
 
 checkWinner(dAvg, kAvg);
 
+*/
 
+// Arrays : 
+
+const friend1 = "Pranali Newaskar";
+const friend2 = "Amol Goykar"
+const friend3 = "Revan Shelke"
+
+const friends = ["Pranali", "Amol", "Revan"];
+console.log(friends);
+
+const newFriends = new Array("Sanchi", "Abhinandan", "Pragati Tai");
+console.log(newFriends);
+
+console.log(friends.length);
+console.log(newFriends[newFriends.length - 1]);
+
+newFriends[2] = "Jeevan";
+console.log(newFriends);
+
+const firstName = "Rupam";
+const rupam = [firstName, "Sutar", 2022 - 1998, "Student", friends];
+console.log(rupam);

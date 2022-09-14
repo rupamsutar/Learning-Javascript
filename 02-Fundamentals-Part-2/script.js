@@ -253,7 +253,7 @@ if (rupam[interestedIn]) {
 
 
 
-// Object Methods: 
+// Object Methods:
 
 
 const rupam = {
@@ -285,7 +285,7 @@ const rupam = {
 
 console.log(rupam.getSummary());
 
-*/
+
 
 // Coding Challenge #4
 
@@ -316,5 +316,13 @@ if (markMiller.calcBMI() > johnSmith.calcBMI()) {
     console.log(`Marks BMI (${markMiller.bmi}) is equal John Smith's BMI (${johnSmith.bmi})`);
 } else {
     console.log(`Marks BMI (${markMiller.bmi}) is less than John Smith's BMI (${johnSmith.bmi})`);
+}
+
+*/
+
+//Iteration : The for Loop :
+
+for (let rep = 1; rep < 11; rep++) {
+    console.log(`Come on boy ! ${10 - rep} More`)
 }
 

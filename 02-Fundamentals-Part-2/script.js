@@ -400,7 +400,7 @@ for (let i = 1; i <= 6; i++) {
     };
 };
 
-*/
+
 
 let rep = 1;
 
@@ -416,3 +416,43 @@ while (dice !== 6) {
     console.log(`You rolled a ${dice}`);
     dice = Math.trunc(Math.random() * 6) + 1;
 };
+
+*/
+
+// Final Coding Challenge:
+
+const bills = [247, 65, 78, 380, 160, 220, 285, 564, 70, 80, 140];
+const tips = [];
+const totals = [];
+
+function calcTip(bill) {
+    if (50 <= bill <= 300) {
+        tips.push(0.15 * bill);
+        totals.push(bill + (0.15 * bill));
+        return 0.15 * bill;
+    } else {
+        tips.push(0.2 * bill);
+        totals.push(bill + (0.2 * bill));
+        return 0.2 * bill;
+    }
+};
+
+for (let i = 0; i < bills.length; i++) {
+    calcTip(bills[i]);
+}
+
+console.log(bills);
+console.log(tips);
+console.log(totals);
+console.log(" ");
+
+function calcAverage(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    console.log(`The average is ${sum / (arr.length)}`);
+}
+
+calcAverage(totals);
+

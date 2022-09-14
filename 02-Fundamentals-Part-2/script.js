@@ -375,7 +375,7 @@ for (let i = 0; i < rupam.length; i++) {
     console.log(rupam[i]);
 }
 
-*/
+
 
 // Looping Backwards and Loops in Loops :
 
@@ -400,3 +400,19 @@ for (let i = 1; i <= 6; i++) {
     };
 };
 
+*/
+
+let rep = 1;
+
+while (rep <= 5) {
+    console.log(`Exercise Repition ${rep}`);
+    rep++;
+}
+console.log("---------------DICE------------------");
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+
+while (dice !== 6) {
+    console.log(`You rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+};

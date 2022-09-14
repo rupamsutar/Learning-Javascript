@@ -318,7 +318,7 @@ if (markMiller.calcBMI() > johnSmith.calcBMI()) {
     console.log(`Marks BMI (${markMiller.bmi}) is less than John Smith's BMI (${johnSmith.bmi})`);
 }
 
-*/
+
 
 //Iteration : The for Loop :
 
@@ -326,3 +326,51 @@ for (let rep = 1; rep < 11; rep++) {
     console.log(`Come on boy ! ${10 - rep} More`)
 }
 
+*/
+
+// Looping Arrays, Breaking And Continuing !
+
+const rupam = [
+    "Rupam",
+    "Sutar",
+    2022 - 1998,
+    "Student",
+    ["Pranali", "Chiku", "Shubham"]
+];
+
+const types = [];
+const newTypes = [];
+
+for (let i = 0; i < rupam.length; i++) {
+    console.log(rupam[i]);
+    types.push(typeof (rupam[i]));
+    newTypes[i] = typeof (rupam[i]);
+}
+
+console.log(types);
+console.log(newTypes);
+
+const years = [1996, 1998, 1999, 2000, 2003];
+const ages = [];
+for (let i = 0; i < years.length; i++) {
+    ages[i] = (2022 - years[i]);
+}
+
+console.log(years);
+console.log(ages);
+
+
+// Continue and Break :
+console.log("--- ONLY STRINGs ---");
+
+for (let i = 0; i < rupam.length; i++) {
+    if (typeof (rupam[i]) !== "string") continue;
+    console.log(rupam[i]);
+}
+
+console.log("--- BREAK WITH NUMBER ---")
+for (let i = 0; i < rupam.length; i++) {
+    if (typeof (rupam[i]) === "number") break;
+
+    console.log(rupam[i]);
+}

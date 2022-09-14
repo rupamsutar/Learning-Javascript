@@ -326,7 +326,7 @@ for (let rep = 1; rep < 11; rep++) {
     console.log(`Come on boy ! ${10 - rep} More`)
 }
 
-*/
+
 
 // Looping Arrays, Breaking And Continuing !
 
@@ -374,3 +374,29 @@ for (let i = 0; i < rupam.length; i++) {
 
     console.log(rupam[i]);
 }
+
+*/
+
+// Looping Backwards and Loops in Loops :
+
+const rupam = [
+    "Rupam",
+    "Sutar",
+    2022 - 1998,
+    "Student",
+    ["Pranali", "Chiku", "Shubham"]
+];
+
+for (let i = rupam.length - 1; i >= 0; i--) {
+    console.log(rupam[i]);
+};
+
+// Gym Exercises
+
+for (let i = 1; i <= 6; i++) {
+    console.log(`---------- Starting Exercises ${i}`);
+    for (let j = 1; j <= 5; j++) {
+        console.log(`Exercise ${i}: Lifting Weight Repition ${j}`);
+    };
+};
+

@@ -30,8 +30,80 @@ const Restaurant = {
       close: 24,
     },
   },
+
+  orderDelivery: function({starterIndex, mainIndex, time, address}) {
+    console.log(`Order Recieved of ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} at ${time} on the address : ${address}`);
+  }
 };
 
+
+// Destructuring Objects:
+
+Restaurant.orderDelivery({
+  time: "22:30",
+  address: "Rajneegandha Housing society",
+  mainIndex: 2,
+  starterIndex: 1,
+});
+
+
+
+
+const {name, categories, openingHours} = Restaurant;
+console.log(name, categories, openingHours);
+console.log(" ");
+console.log("88888888888888888888888888888888888888888888888888888888")
+
+const {name: restaurantName, starterMenu: starters, mainMenu: mainCourse} = Restaurant;
+console.log(restaurantName, starters, mainCourse );
+
+//Default values:
+const {amenu=[], name: hotel, location: locations = []} = Restaurant;
+console.log(amenu, hotel, locations);
+
+//Mutating Values:
+let a = 999;
+let b = 888;
+
+const obj = {
+  a: 15,
+  b: 30,
+  c: 45
+};
+
+({a, b} = obj);
+console.log(a,b)
+
+const {fri: {open:aa ,close:bb}} = openingHours;
+console.log(aa, bb);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 // Practice Started Here:
 
 const arr = [6,7,8,9]; 
@@ -69,5 +141,5 @@ const nested = [1, 2, 3, [4, 5, 6]];
 const [i, j, k, [l, m, n]] = nested;
 console.log(i, j, k, l, m, n);
 
-
+*/
 

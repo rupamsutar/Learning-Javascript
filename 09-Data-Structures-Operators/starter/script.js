@@ -33,10 +33,79 @@ const Restaurant = {
 
   orderDelivery: function({starterIndex, mainIndex, time, address}) {
     console.log(`Order Recieved of ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} at ${time} on the address : ${address}`);
+  },
+
+  orderMaggie: function(ing1, ing2, ing3) {
+    console.log(`Here is your maggie with ${ing1}, ${ing2}, ${ing3}`);
   }
 };
 
 
+// Spread Operator:
+
+const arr = [1, 2, 3, 4, 5];
+
+const newarr = [...arr, 6, 7, 8, 9, 10];
+
+console.log(newarr);
+
+const fullMenuOfRestaurant = [...Restaurant.starterMenu, ...Restaurant.mainMenu, "VadaPav", "Maggie", "French-Fries"];
+console.log(fullMenuOfRestaurant);
+
+// Iterablaes: Arrays, Strings, maps, sets
+// and the spread operator is applicable to the Iterables:
+
+const myName = "Rupam Jaywant Sutar"
+console.log([...myName]);
+
+const maggieIngredients = [
+  prompt("Please mention your ingredient 1 for the maggie"),
+  prompt("Please mention your ingredient 2 for the maggie"),
+  prompt("Please mention your ingredient 3 for the maggie")
+];
+
+Restaurant.orderMaggie(...maggieIngredients);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 // Destructuring Objects:
 
 Restaurant.orderDelivery({
@@ -78,32 +147,6 @@ const {fri: {open:aa ,close:bb}} = openingHours;
 console.log(aa, bb);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
 // Practice Started Here:
 
 const arr = [6,7,8,9]; 

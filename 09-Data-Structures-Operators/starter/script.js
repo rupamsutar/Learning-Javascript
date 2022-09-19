@@ -37,44 +37,53 @@ const Restaurant = {
 
   orderMaggie: function(ing1, ing2, ing3) {
     console.log(`Here is your maggie with ${ing1}, ${ing2}, ${ing3}`);
+  },
+
+  orderBurger: function(mainIngredient, ...otherIngredients) {
+    console.log(mainIngredient);
+    console.log(...otherIngredients);
   }
 };
 
+//Rest pattern and Parameter: 
+const arr = [1, 2, 3, 4, 5, 6,];
 
-// Spread Operator:
+//Spread operator is on the right side of equal symbol:
+const newArr = [...arr, 7, 8, 9, 10];
 
-const arr = [1, 2, 3, 4, 5];
+// Rest patter is on the left side of the equal symbol:
+const [a, b, c, ...newRestArr] = newArr;
 
-const newarr = [...arr, 6, 7, 8, 9, 10];
+console.log(a, b, c, newRestArr);
 
-console.log(newarr);
+const [qwe, ,asd, ...otherFood]=[...Restaurant.starterMenu, ...Restaurant.mainMenu]
 
-const fullMenuOfRestaurant = [...Restaurant.starterMenu, ...Restaurant.mainMenu, "VadaPav", "Maggie", "French-Fries"];
-console.log(fullMenuOfRestaurant);
+console.log(qwe, asd, otherFood);
 
-// Iterablaes: Arrays, Strings, maps, sets
-// and the spread operator is applicable to the Iterables:
+//RestPattern on objects:
 
-const myName = "Rupam Jaywant Sutar"
-console.log([...myName]);
-
-const maggieIngredients = [
-  prompt("Please mention your ingredient 1 for the maggie"),
-  prompt("Please mention your ingredient 2 for the maggie"),
-  prompt("Please mention your ingredient 3 for the maggie")
-];
-
-Restaurant.orderMaggie(...maggieIngredients);
+const {sat, ...weekDays} = Restaurant.openingHours;
+console.log(weekDays);
+const {fri: friday, thu: thursday} = weekDays;
+console.log(friday, thursday);
 
 
+//Rest Pattern for Functions:
+
+function add(...numbers) {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  console.log(sum);
+};
+
+add(2,3,4,1,323,45);
+add(3,45,23,3);
+add(89,47,37);
 
 
-
-
-
-
-
-
+Restaurant.orderBurger("Tikki", "Onion", "Tomatoes", "Ketchup", "Mayonese");
 
 
 
@@ -106,6 +115,32 @@ Restaurant.orderMaggie(...maggieIngredients);
 
 
 /*
+// Spread Operator:
+
+const arr = [1, 2, 3, 4, 5];
+
+const newarr = [...arr, 6, 7, 8, 9, 10];
+
+console.log(newarr);
+
+const fullMenuOfRestaurant = [...Restaurant.starterMenu, ...Restaurant.mainMenu, "VadaPav", "Maggie", "French-Fries"];
+console.log(fullMenuOfRestaurant);
+
+// Iterablaes: Arrays, Strings, maps, sets
+// and the spread operator is applicable to the Iterables:
+
+const myName = "Rupam Jaywant Sutar"
+console.log([...myName]);
+
+const maggieIngredients = [
+  prompt("Please mention your ingredient 1 for the maggie"),
+  prompt("Please mention your ingredient 2 for the maggie"),
+  prompt("Please mention your ingredient 3 for the maggie")
+];
+
+Restaurant.orderMaggie(...maggieIngredients);
+
+
 // Destructuring Objects:
 
 Restaurant.orderDelivery({

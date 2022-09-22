@@ -52,21 +52,38 @@ const Restaurant = {
   
 };
 
-//Enhanced Object Literals:
+//The optional Chaining: 
 
+if(Restaurant.openingHours && Restaurant.openingHours.mon) {
+  console.log(Restaurant.openingHours.mon);
+}
 
+console.log(Restaurant.openingHours?.mon?.open)
+console.log(Restaurant.openingHours?.sat?.open)
 
-console.log(Restaurant)
+const days = ["mon", "tue","wed", "thu", "fri", "sat"];
 
+for (const day of days) {
+  const open = Restaurant.openingHours[day]?.open ?? "Closed";
+  console.log(`On ${day} we open at ${open}`);
+}
 
+//Methods:
 
+console.log(Restaurant.order?.(0, 1) ?? "Method does not exist");
+console.log(Restaurant.orderCoffe?.(0, 1) ?? "Method does not exist");
 
+//Arrays
+const users = [{
+  name: "Rupam",
+  surname: "Sutar",
+  enrollmentNumber: 1516120162
+}];
 
+const shelby = [];
 
-
-
-
-
+console.log(users[0]?.name ?? "No found user");
+console.log(shelby[0]?.name ?? "No found user");
 
 
 
@@ -91,6 +108,11 @@ console.log(Restaurant)
 
 
 /*
+
+//Enhanced Object Literals:
+console.log(Restaurant)
+
+
 
 //The for-of Loop
 

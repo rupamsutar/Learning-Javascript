@@ -49,13 +49,55 @@ const Restaurant = {
   
 };
 
-//  The Nullish Coalescing Operator (??):
+// Logical Assignment Operators: 
 
-Restaurant.numGuests = 0;
+const rest1 = {
+  name: "La Piazza",
+  numGuests: 20,
+  tables:30
+}
 
-const guests = Restaurant.numGuests ?? 10;
+const rest2 = {
+  name: "Hotel Torna",
+  owner: "Shinde Mama"
+}
 
-console.log(guests);
+rest1.numGuests = rest1.numGuests || 10;
+rest2.numGuests =  rest2.numGuests || 10;
+
+console.log(rest1);
+console.log(rest2);
+
+//OR Equal operator:
+// this works same as the above but in a more modern way:
+
+rest1.tables ||= 10;
+rest2.tables ||= 10;
+
+console.log(rest1);
+console.log(rest2);
+
+// the same goes for and equal operator
+
+rest1.owner &&= "<ANONYMOUS>";
+rest2.owner &&= "<ANONYMOUS>";
+
+console.log(rest1.owner);
+console.log(rest2.owner);
+
+// the same goes for nullish equal operator:
+
+rest1.tables = 0;
+
+rest1.tables ??= 10;
+rest2.tables ??= 10;
+
+console.log(rest1.tables);
+console.log(rest2.tables);
+
+
+
+
 
 
 
@@ -78,6 +120,17 @@ console.log(guests);
 
 
 /*
+
+//  The Nullish Coalescing Operator (??):
+
+Restaurant.numGuests = 0;
+
+const guests = Restaurant.numGuests ?? 10;
+
+console.log(guests);
+
+
+
 
 // Short circuiting (&& and ||) :
 

@@ -42,8 +42,72 @@ const Restaurant = {
   orderBurger: function(mainIngredient, ...otherIngredients) {
     console.log(mainIngredient);
     console.log(...otherIngredients);
-  }
+  },
+
+  numGuests: 45,
+  
+  
 };
+
+
+// Short circuiting (&& and ||) :
+
+//shortcircuiting
+console.log(3 || "Rupam") // logs 3 as 3 is a truthy value
+console.log(0 || "Rupam") // logs "Rupam" as 0 is a falsy value
+console.log(true || undefined) // logs true as true is a truthy value 
+console.log(0 || null) // logs null as it is the last falsy value
+
+console.log(null || undefined || 0 || "Rupam Sutar" || "" || 0); // logs Rupam sutar
+
+let noOfGuests = Restaurant.numGuests ? Restaurant.numGuests : 10; 
+
+//the above statement can be completely replaced by shortcircuiting.
+
+noOfGuests = Restaurant.numGuests || 10;
+
+console.log(noOfGuests)
+
+console.log("--------- AND ---------");
+
+//And operator is complete opposite of Or operator, it shortcircuits at falsy values
+console.log(0 && "Rupam") // logs 0 as it is the first falsy value.
+console.log(17 && "Rupam") // logs "rupam " as there is no falsy value and "RUpam" is the last truthy value.
+console.log("Rupam" && "sutar" && 17 && null && 45);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 
 //Rest pattern and Parameter: 
 const arr = [1, 2, 3, 4, 5, 6,];
@@ -95,26 +159,6 @@ Restaurant.orderBurger("Tikki", "Onion", "Tomatoes", "Ketchup", "Mayonese");
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
 // Spread Operator:
 
 const arr = [1, 2, 3, 4, 5];

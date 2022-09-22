@@ -49,6 +49,35 @@ const Restaurant = {
   
 };
 
+//  The Nullish Coalescing Operator (??):
+
+Restaurant.numGuests = 0;
+
+const guests = Restaurant.numGuests ?? 10;
+
+console.log(guests);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 
 // Short circuiting (&& and ||) :
 
@@ -77,37 +106,6 @@ console.log("Rupam" && "sutar" && 17 && null && 45);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
 
 //Rest pattern and Parameter: 
 const arr = [1, 2, 3, 4, 5, 6,];

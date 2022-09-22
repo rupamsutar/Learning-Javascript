@@ -50,6 +50,35 @@ const Restaurant = {
 };
 
 
+
+//The for-of Loop
+
+const menu = [...Restaurant.starterMenu, ...Restaurant.mainMenu];
+
+for (const [i, el] of menu.entries()) console.log(`${i + 1} : ${el}`);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //challenge 1
 
 const game = {
@@ -95,8 +124,6 @@ const game = {
 }
 
 
-
-
 const [player1, player2] = game.players;
 
 console.log(player1);
@@ -119,25 +146,6 @@ console.log(team1, draw, team2);
 function printGoals()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
 
 // Logical Assignment Operators: 
 

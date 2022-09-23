@@ -47,10 +47,61 @@ const Restaurant = {
     console.log(...otherIngredients);
   },
 
-  numGuests: 45,
-  
+  numGuests: 45, 
   
 };
+
+const airLines = "Air India";
+const plane = "A320";
+console.log(plane[0]);
+console.log(plane[1]);
+console.log(plane[2]);
+console.log(plane[3]);
+
+console.log("B737"[1]);
+console.log(airLines.length);
+console.log("B737".length);
+
+console.log(airLines.indexOf("i"));
+console.log(airLines.lastIndexOf("i"));
+console.log(airLines.indexOf("India"));
+
+console.log(airLines.slice(4,5));
+
+const checkMiddleSeat = function(seat) {
+  const s = seat.slice(-1);
+  console.log(s === "C" || s === "E" ? "You got the middle Seat" : "You just got Lucky");
+};
+
+checkMiddleSeat("121B");
+checkMiddleSeat("157C");
+
+console.log(new String("Jeevan"));
+console.log(typeof (new String("Rupam")));
+console.log(typeof (new String("Rupam").slice(1)));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 
 
 //Coding Challenge 3:
@@ -84,26 +135,6 @@ for (const [key, value] of gameEvents){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
 
 //Maps :
 

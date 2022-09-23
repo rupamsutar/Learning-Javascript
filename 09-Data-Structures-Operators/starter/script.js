@@ -52,6 +52,111 @@ const Restaurant = {
   
 };
 
+//Maps :
+
+const orderSet = new Set(["Pizza", "Maggie", "Coffee", "Maggie", "Pizza", "Dosa"]);
+
+console.log(orderSet);
+
+console.log(new Set("Rupam"));
+
+console.log(orderSet.size);
+console.log(orderSet.has("Pizza"));
+console.log(orderSet.has("Bread"));
+orderSet.add("Garlic Bread");
+orderSet.add("Garlic Bread");
+console.log(orderSet);
+orderSet.delete("Garlic Bread");
+//orderSet.clear();
+console.log(orderSet);
+
+for (const orders of orderSet) console.log(orders);
+
+const staff = ["waiter", "chef", "manager", "waiter", "manager", "chef"];
+
+const staffUnique = [...new Set(staff)];
+console.log(staffUnique);
+
+const rest = new Map();
+
+rest.set("name", "Hotel Jagdamba");
+rest.set(1, "Khed Shivapur");
+console.log(rest.set(2, "Pune"));
+
+rest
+  .set("menus", ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'])
+  .set("open", 10)
+  .set("close", 22)
+  .set(true, "We are open :D")
+  .set(false, "We are closed :(")
+  .set(false, "We are closed too")
+
+console.log(rest.get("menus"));
+console.log(rest.get(false));
+console.log(rest.get(10));
+
+console.log(rest);
+
+console.log("888888888888888888888888888888888888888888888888888888888888888888888888");
+
+const question = new Map([
+  ["question", "What is the best programmming language ?"],
+  [1, "C"],
+  [2, "Java"],
+  [3 , "Javascript"],
+  ["correct", 3],
+  [true, "Correct"],
+  [false, "Try again"]
+]);
+
+console.log(question);
+
+const hoursMap = new Map(Object.entries(openingHours));
+console.log(hoursMap);
+
+console.log(question.get("question"));
+
+for (const [key, value] of question) {
+  if (typeof key === "number") {
+    console.log(`Answer ${key}: ${value}`);
+  }
+}
+const ans = 3;
+
+console.log(question.get(question.get("correct") === ans));
+
+console.log([...question]);
+console.log([...question.entries()]);
+console.log([...question.keys()]);
+console.log([...question.values()]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+
 //Challenge 2 :
 
 const game = {
@@ -117,29 +222,6 @@ for (const [team, odd] of Object.entries(game.odds)) {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
 
 //Looping objects:
 

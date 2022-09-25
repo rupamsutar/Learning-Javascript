@@ -51,6 +51,67 @@ const Restaurant = {
   
 };
 
+
+// Strings PART 3
+
+const name = "My+name+is+Rupam+Sutar";
+console.log(name.split("+"));
+
+const name1 = "Rupam Jaywant Sutar";
+
+const [firstName, middleName, lastName] = name1.split(" ");
+
+console.log(firstName);
+console.log(middleName);
+console.log(lastName);
+
+const newName = ["Mr.", firstName, lastName.toUpperCase()].join(" ");
+console.log(newName);
+
+const xname = "rupam jaywant sutar";
+
+function capitalizeName(name) {
+  const nameSplit = name.split(" ");
+  const newNameArray = [];
+
+  for (const n of nameSplit) {
+    newNameArray.push(n[0].toUpperCase() + n.slice(1));
+  }
+
+  console.log(newNameArray.join(" "));
+}
+
+capitalizeName(xname);
+capitalizeName("pranali vivek newaskar");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+
 //Strings PART 2
 
 const airLines = "Air India";
@@ -153,18 +214,6 @@ checkBuggage("I have a gun and some extra material");
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-/*
 
 
 //Coding Challenge 3:

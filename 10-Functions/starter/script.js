@@ -1,5 +1,55 @@
 'use strict';
 
+
+//Functions Accepting Callback Functions: 
+
+const oneWord = function(str) {
+    return str.replace(/ /g, "").toLowerCase();
+}
+
+const upperFirstWord = function(str) {
+    const [first, ...other] = str.split(" ");
+    return [first.toUpperCase(), ...other].join(" ");
+}
+
+//Higher Order Function :
+
+const transformer = function (str, fn) {
+    console.log(`Original String: ${str}`);
+    console.log(`Transformed String: ${fn(str)}`);
+}
+
+transformer("Javascript is the Best !", upperFirstWord);
+transformer("Javascript is the Best !", oneWord);
+
+//Javascript uses callback all the time:
+
+function high5() {
+    console.log("hey !");
+}
+document.body.addEventListener("click", high5);
+["Rupam", "Jaywant", "Sutar"].forEach(high5);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+// Value vs Reference :
+
 const flight = "A343V";
 
 const rupam = {
@@ -37,25 +87,6 @@ checkIn(flight, rupam);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
 
 //Default Parameters: 
 

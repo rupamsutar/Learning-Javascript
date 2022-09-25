@@ -1,5 +1,51 @@
 'use strict';
 
+//Functions Returning Functions:
+
+const greet = function (greeting) {
+    return function(name) {
+        console.log(`${greeting} ${name}`);
+    }
+}
+
+const greeterHey = greet("Hey !");
+
+greeterHey("Rupam");
+greeterHey("Pranali");
+greeterHey("Shantanu");
+
+
+const greetme = greeting => name => console.log(`${greeting} ${name}`);
+
+greetme("Hey you there !")("Mummy & Pappa");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
 
 //Functions Accepting Callback Functions: 
 
@@ -38,15 +84,6 @@ document.body.addEventListener("click", high5);
 
 
 
-
-
-
-
-
-
-
-
-/*
 
 // Value vs Reference :
 

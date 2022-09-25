@@ -51,8 +51,12 @@ const Restaurant = {
   
 };
 
+//Strings PART 2
+
 const airLines = "Air India";
 const plane = "A320";
+
+
 console.log(plane[0]);
 console.log(plane[1]);
 console.log(plane[2]);
@@ -80,8 +84,67 @@ console.log(new String("Jeevan"));
 console.log(typeof (new String("Rupam")));
 console.log(typeof (new String("Rupam").slice(1)));
 
+const passenger = "jeeVan ahirE";
+// Print the name correctly
+
+const passengerLower = passenger.toLowerCase();
+//console.log(passengerLower);
 
 
+const firstName = passengerLower.slice(0,passengerLower.indexOf(" "));
+const lastName = passengerLower.slice(passengerLower.indexOf(" ") + 1);
+
+//console.log(firstName, lastName);
+
+const firstNameC = (firstName.slice(0,1)).toUpperCase() + firstName.slice(1);
+const lastNameC = (lastName.slice(0,1)).toUpperCase() + lastName.slice(1);
+
+const correctName = firstNameC + " " + lastNameC;
+console.log(correctName);
+
+console.log("**********8888888888888*************88888888888888*************888888888888************");
+
+
+const email = "rupamsutar281998@gmail.com";
+const tEmail = "  RupamSutar281998@gmaIl.com";
+
+//make email and TEmail equal:
+
+console.log(tEmail.toLowerCase().trim());
+
+const price = "28,989$"
+console.log(price.replace("$", "#").replace(",", "."));
+
+const announcement = "All passengers come to door no 28, I repeat door no 28";
+console.log(announcement.replaceAll("door", "gate"));
+
+const parac = "door door door door door";
+
+console.log(parac.replace(/door/g, "gate"));
+
+const planes = "Airbus A320";
+
+console.log(planes.includes("A320"));
+console.log(planes.includes("bus A"));
+console.log(planes.includes("Boeing"));
+console.log(planes.startsWith("Airbus"));
+
+planes.startsWith("Airbus") && planes.endsWith("neo") ? console.log("Airbus New Family") : console.log("Not an air bus family");
+
+
+const checkBuggage = function (items) {
+  const buggage = items.toLowerCase();
+  if(buggage.includes("knife") || buggage.includes("gun")) {
+    console.log("You are not allowed to enter into the flight");
+  } else {
+    console.log("Welocme Onboard !")
+  }
+}
+
+
+checkBuggage("I have a Knife and a Gun");
+checkBuggage("I have a passport and a book");
+checkBuggage("I have a gun and some extra material");
 
 
 

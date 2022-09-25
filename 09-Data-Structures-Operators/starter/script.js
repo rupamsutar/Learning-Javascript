@@ -51,6 +51,58 @@ const Restaurant = {
   
 };
 
+// Padding
+
+const message = "Go to the gate no 23";
+
+console.log(message.padStart(25,"+").padEnd(31, "+"));
+
+function maskCreditCard (number) {
+  const str = number + "";
+  console.log(str.slice(-4).padStart(str.length, "*"));
+}
+
+maskCreditCard(224587451225);
+maskCreditCard("377734892973");
+
+console.log("Rupam Sutar is my name \n".repeat(5));
+
+const planeWaiting = function(pw) {
+  console.log(`There are ${pw} planes waiting ${"✈️".repeat(pw)}`);
+}
+
+planeWaiting(5);
+planeWaiting(4);
+planeWaiting(3);
+planeWaiting(2);
+planeWaiting(1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 
 // Strings PART 3
 
@@ -92,24 +144,6 @@ capitalizeName("pranali vivek newaskar");
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
 
 
 //Strings PART 2

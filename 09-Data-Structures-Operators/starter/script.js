@@ -51,6 +51,33 @@ const Restaurant = {
   
 };
 
+//Coding Challenge 4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
 // Padding
 
 const message = "Go to the gate no 23";
@@ -84,25 +111,6 @@ planeWaiting(1);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
 
 // Strings PART 3
 

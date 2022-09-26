@@ -1,5 +1,86 @@
 'use strict';
 
+
+//Closure 
+
+const secureBooking = function() {
+    let passangerCount = 0;
+
+    return function() {
+        passengerCount++;
+        console.log(`Passengers : ${passangerCount}`);
+    }
+}
+
+const book = secureBooking();
+
+let f;
+
+const g = function() {
+    const a = 23;
+    f = function() {
+        console.log(a * 2);
+    }
+}
+
+const h = function() {
+    const b = 50;
+    f = function() {
+        console.log(b * 2);
+    }
+}
+
+
+g();
+f();
+console.dir(f);
+
+// f is re-assigned by h now:
+
+h();
+f();
+console.dir(f);
+
+//Example 2:
+
+const boardPassenger = function(n, wait) {
+    const perGroup = n / 3;
+
+    setTimeout(function(){
+        console.log(`We are now boarding all ${n} passengers.`);
+        console.log(`There are 3 groups, each with ${perGroup} passengers`);
+    } , wait * 1000);
+
+    console.log(`Will start boarding in ${wait} seconds !`)
+}
+
+boardPassenger(180, 5);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
 // Immediately Invoked function Expression 
 
 const runOnce = function() {
@@ -29,28 +110,6 @@ runOnce();
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
 
 // Coding Challenge #1
 

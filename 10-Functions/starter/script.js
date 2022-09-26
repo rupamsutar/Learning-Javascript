@@ -1,5 +1,57 @@
 'use strict';
 
+// Immediately Invoked function Expression 
+
+const runOnce = function() {
+    console.log("This will never run again !");
+}
+
+runOnce();
+runOnce();
+
+
+// Immediately Invoked function Expression :
+
+(function() {
+    console.log("This will never run again ! - TRUE");
+})();
+
+// Second way of IIFE
+
+(() => console.log("Second way is also true"))();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
 // Coding Challenge #1
 
 // Let's build a simple poll app!
@@ -83,30 +135,6 @@ document
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
 // The Bind Method: 
 
 const lufthansa = {

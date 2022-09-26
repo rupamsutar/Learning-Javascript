@@ -1,5 +1,103 @@
 'use strict';
 
+// The Bind Method: 
+
+const lufthansa = {
+    airline: "lufthansa",
+    iataCode: "LH",
+    bookings: [],
+    book(flightnum, name) {
+        console.log(`${name} booked a seat on ${this.airline} flight ${this.iataCode}${flightnum}`);
+        this.bookings.push({flight: `${this.iataCode}${flightnum}`, name});
+        console.log(this);
+    }
+}
+
+const eurowings = {
+    airline: "EuroWings",
+    iataCode: "EW",
+    bookings: []
+}
+
+const swiss = {
+    airline: "Swiss Air Line",
+    iataCode: "SAL",
+    bookings: []
+}
+
+const book = lufthansa.book;
+
+
+//bind methods:
+
+const bookEW = book.bind(eurowings);
+const bookLT = book.bind(lufthansa);
+const bookSA = book.bind(swiss);
+
+bookEW(578, "Tommy Shelby");
+bookSA(987, "Arthur Shelby");
+
+const bookLT846 = book.bind(lufthansa, 846);
+
+bookLT846("Robb Stark");
+bookLT846("John Snow");
+
+//With Event Handlers:
+
+lufthansa.planes = 300;
+lufthansa.buyPlane = function() {
+    console.log(this);
+    this.planes ++;
+    console.log(this.planes);
+}
+
+
+// This wont work as the this keyword will point to the object of the event handler function:
+//document.querySelector(".buy").addEventListener("click", lufthansa.buyPlane);
+
+//Therefore we use bind method here, call method is not used as it calls the function:
+document.querySelector(".buy").addEventListener("click", lufthansa.buyPlane.bind(lufthansa));
+
+
+// Partial Application:
+
+const addTax = (rate, value) => value + value*rate;
+
+console.log(addTax(0.2, 220));
+
+const addVAT = addTax.bind(null, 0.23);
+console.log(addVAT(220));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
 // The call and apply method: 
 
 const lufthansa = {
@@ -62,15 +160,6 @@ console.log(eurowings);
 
 
 
-
-
-
-
-
-
-
-
-/*
 
 //Functions Returning Functions:
 

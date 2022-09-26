@@ -1,5 +1,77 @@
 'use strict';
 
+// The call and apply method: 
+
+const lufthansa = {
+    airline: "lufthansa",
+    iataCode: "LH",
+    bookings: [],
+    book(flightnum, name) {
+        console.log(`${name} booked a seat on ${this.airline} flight ${this.iataCode}${flightnum}`);
+        this.bookings.push({flight: `${this.iataCode}${flightnum}`, name})
+    }
+}
+
+
+
+lufthansa.book(235, "Rupam Sutar");
+lufthansa.book(654, "Pranali Sutar");
+
+console.log(lufthansa.bookings);
+
+lufthansa.book(874, "Shantanu Sutar");
+
+
+const eurowings = {
+    airline: "EuroWings",
+    iataCode: "EW",
+    bookings: []
+}
+
+const book = lufthansa.book;
+
+// Does not work due to the this keyword:
+//book(475, "Jaywant Sutar");
+
+book.call(eurowings, 475, "Jaywant Sutar");
+console.log(eurowings);
+
+const swiss = {
+    airline: "Swiss Air Line",
+    iataCode: "SAL",
+    bookings: []
+}
+
+book.call(swiss, 876, "Digamber Gayake");
+console.log(swiss);
+
+//Apply Method: 
+
+const flightData = [412, "Gearge Michael"];
+book.apply(eurowings, flightData);
+console.log(eurowings);
+
+book.call(eurowings, ...flightData);
+console.log(eurowings);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
 //Functions Returning Functions:
 
 const greet = function (greeting) {
@@ -28,23 +100,6 @@ greetme("Hey you there !")("Mummy & Pappa");
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
 
 
 //Functions Accepting Callback Functions: 

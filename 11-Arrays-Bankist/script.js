@@ -8,7 +8,58 @@
 //   ['GBP', 'Pound sterling'],
 // ]);
 
-// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+for (const [i, mov] of movements.entries()) {
+    if(mov > 0) {
+        console.log(`Movement ${i+1}: You deposited amount is ${mov} !`);
+    } else {
+        console.log(`Movement ${i+1}: Your withdrawal is of Rs ${Math.abs(mov)}`);
+    }
+}
+
+
+console.log(" \n \n \n");
+
+movements.forEach(function(mov, i, a) {
+    if(mov > 0) {
+        console.log(`Movement ${i + 1}: You deposited amount is ${mov} !`);
+    } else {
+        console.log(`Movement ${i + 1} Your withdrawal is of Rs ${Math.abs(mov)}`);
+    }
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 
 // Slice Method
 let arr = ["a", "b", "c", "d", "e"];
@@ -42,7 +93,7 @@ const nums = numarr.concat(numarr2);
 console.log(typeof (nums.join("-")));
 
 
-
+*/
 
 
 

@@ -4,13 +4,22 @@ const btn = document.querySelector('.btn-country');
 const countriesContainer = document.querySelector('.countries');
 
 
+const request = fetch("https://restcountries.com/v3.1/alpha/IN");
+// console.log(request);
 
 
 
 
+const getCountryCode = function(countryCode) {
+  fetch("https://restcountries.com/v3.1/alpha/" + countryCode).then(function(response) {
+      console.log(response);
+      return response.json();
+  }).then(function(data) {
+    console.log(data);
+  });
+}
 
-
-
+getCountryCode("IN");
 
 
 
